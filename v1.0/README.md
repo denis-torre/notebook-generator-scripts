@@ -15,7 +15,7 @@ This release includes the following features:
 
 
 ## Scripts.py
-The *Scripts.ipy* file contains Python scripts used to normalize and analyze RNA-seq datasets.
+The *Scripts.py* file contains Python scripts used to normalize and analyze RNA-seq datasets.
 
 ## 1. Load Dataset (*load_dataset*)
 ```python
@@ -31,10 +31,44 @@ Load an RNA-seq dataset from GEO in the Python environment.
 | **platform** | **str** | GEO accession of the platform used to analyze the dataset.  If the dataset has been processed with multiple platforms, the first one will be selected by default. | [optional] |
 
 ### Output
-| Name (default) | Type | Description | Notes |
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts.  Columns are GEO samples, rows are gene symbols, values are raw counts as mapped by ARCHS4 ([http://amp.pharm.mssm.edu/archs4/](http://amp.pharm.mssm.edu/archs4/)). |
+| **sample_metadata_dataframe** | **DataFrame** | Metadata describing sample properties.  Columns are metadata categories, rows are GEO sample IDs, values represent metadata values as annotated on GEO. |
+
+## 2. Library Sizes (*library_sizes*)
+### Analysis
+```python
+# Get Library Sizes
+library_size_dataframe = library_sizes.get(rawcount_dataframe)
+```
+Description.
+
+#### Parameters
+| Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts.  Columns are GEO samples, rows are gene symbols, values are raw counts as mapped by ARCHS4 ([http://amp.pharm.mssm.edu/archs4/](http://amp.pharm.mssm.edu/archs4/)). |  |
-| **sample_metadata_dataframe** | **DataFrame** | Metadata describing sample properties.  Columns are metadata categories, rows are GEO sample IDs, values represent metadata values as annotated on GEO. |  |
+| **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts, as provided by *load_dataset*. | [required] |
+
+#### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
+
+### Plots
+```python
+# Plot Library Sizes
+library_sizes.plot(library_size_dataframe)
+```
+Description.
+
+#### Parameters
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts, as provided by *load_dataset*. | [required] |
+
+#### Output
+A histogram displaying library sizes for each sample in the RNA-seq dataset.
+
 
 ## . Template (*template*)
 ```python
@@ -49,6 +83,76 @@ Description.
 | **name** | **str** | description | [required] |
 
 ### Output
-| Name (default) | Type | Description | Notes |
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
+
+## . Template (*template*)
+```python
+# 
+
+```
+Description.
+
+### Parameters
+| Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **DataFrame** | description |  |
+| **name** | **str** | description | [required] |
+
+### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
+
+## . Template (*template*)
+```python
+# 
+
+```
+Description.
+
+### Parameters
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | **str** | description | [required] |
+
+### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
+
+## . Template (*template*)
+```python
+# 
+
+```
+Description.
+
+### Parameters
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | **str** | description | [required] |
+
+### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
+
+
+
+## . Template (*template*)
+```python
+# 
+
+```
+Description.
+
+### Parameters
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | **str** | description | [required] |
+
+### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **name** | **DataFrame** | description |
