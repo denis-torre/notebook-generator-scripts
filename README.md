@@ -3,5 +3,6 @@ This repository contains a collection of Python and R scripts to analyze RNA-seq
 
 ### Overview
 The repository is divided in multiple folders, which correspond to different versions of the scripts.  Each folder contains two files:
-* a init.ipy file, which is used to initialize the Jupyter Notebook (e.g. loading Python and R libraries)
-* a Scripts.py file, which contains the analysis scripts used to analyze the data itself
+* An *init.ipy* file, which is used to initialize the Jupyter Notebook (e.g. loading Python and R libraries).
+* A *Scripts.py* file, which contains Python analysis scripts.
+* A *Scripts.R* file, which contains R analysis scripts.

@@ -1,0 +1,29 @@
+###################################
+##### Notebook Initialization #####
+###################################
+####### Version 1.0
+####### This file contains commands used to initialize the Jupyter Notebook environment by loading useful Python and R libraries.
+##### Author: Denis Torre
+##### Affiliation: Ma'ayan Laboratory, Icahn School of Medicine at Mount Sinai
+
+##### Python
+# Modules
+import os
+import sys
+import pandas as pd
+
+# Custom scripts
+sys.path.append('')
+from Scripts import *
+
+# Plotting
+%matplotlib inline
+from plotly.offline import init_notebook_mode
+init_notebook_mode()
+
+##### R
+# Load R
+%load_ext rpy2.ipython
+
+# Scripts
+%R source('')
