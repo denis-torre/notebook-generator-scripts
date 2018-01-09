@@ -37,122 +37,34 @@ Load an RNA-seq dataset from GEO in the Python environment.
 | **sample_metadata_dataframe** | **DataFrame** | Metadata describing sample properties.  Columns are metadata categories, rows are GEO sample IDs, values represent metadata values as annotated on GEO. |
 
 ## 2. Library Sizes (*library_sizes*)
-### Analysis
+### 2.1 Analysis
 ```python
 # Get Library Sizes
 library_size_dataframe = library_sizes.get(rawcount_dataframe)
 ```
-Description.
+Calculate library sizes from the raw expression dataframe.
 
-#### Parameters
+### Parameters
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts, as provided by *load_dataset*. | [required] |
 
-#### Output
+### Output
 | Name (default) | Type | Description |
 | ---- | ---- | ----------- |
 | **name** | **DataFrame** | description |
 
-### Plots
+### 2.2 Plots
 ```python
 # Plot Library Sizes
 library_sizes.plot(library_size_dataframe)
 ```
-Description.
+Plot a histogram displaying library sizes for each sample in the RNA-seq dataset.
 
-#### Parameters
+### Parameters
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts, as provided by *load_dataset*. | [required] |
 
-#### Output
+### Output
 A histogram displaying library sizes for each sample in the RNA-seq dataset.
-
-
-## . Template (*template*)
-```python
-# 
-
-```
-Description.
-
-### Parameters
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **name** | **str** | description | [required] |
-
-### Output
-| Name (default) | Type | Description |
-| ---- | ---- | ----------- |
-| **name** | **DataFrame** | description |
-
-## . Template (*template*)
-```python
-# 
-
-```
-Description.
-
-### Parameters
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **name** | **str** | description | [required] |
-
-### Output
-| Name (default) | Type | Description |
-| ---- | ---- | ----------- |
-| **name** | **DataFrame** | description |
-
-## . Template (*template*)
-```python
-# 
-
-```
-Description.
-
-### Parameters
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **name** | **str** | description | [required] |
-
-### Output
-| Name (default) | Type | Description |
-| ---- | ---- | ----------- |
-| **name** | **DataFrame** | description |
-
-## . Template (*template*)
-```python
-# 
-
-```
-Description.
-
-### Parameters
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **name** | **str** | description | [required] |
-
-### Output
-| Name (default) | Type | Description |
-| ---- | ---- | ----------- |
-| **name** | **DataFrame** | description |
-
-
-
-## . Template (*template*)
-```python
-# 
-
-```
-Description.
-
-### Parameters
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **name** | **str** | description | [required] |
-
-### Output
-| Name (default) | Type | Description |
-| ---- | ---- | ----------- |
-| **name** | **DataFrame** | description |
