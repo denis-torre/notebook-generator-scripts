@@ -1,4 +1,4 @@
-# Notebook Generator Scripts - Version 1.0
+# Notebook Generator Scripts | Version 1.0
 This repository contains the 1.0 release of the Notebook Generator Scripts.
 
 ## init.ipy
@@ -17,7 +17,14 @@ The *Scripts.ipy* file contains Python scripts used to normalize and analyze RNA
 
 This release includes the following scripts:
 
-### Load ARCHS4 Dataset (load_dataset)
+### 1. Load Dataset (*load_dataset*)
 ```python
+# Load Dataset
 rawcount_dataframe, sample_metadata_dataframe = load_dataset(dataset_accession, platform=None)
 ```
+Load an RNA-seq dataset from GEO in the Python environment.
+
+#### Parameters
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **dataset_accession** | **str** | GEO accession of the dataset to load to the Python environment.  For a complete list of the datasets available for download, please visit [[http://amp.pharm.mssm.edu/archs4/]](http://amp.pharm.mssm.edu/archs4/) | [required] |
