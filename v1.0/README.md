@@ -17,8 +17,6 @@ This release includes the following features:
 ## Scripts.py
 The *Scripts.ipy* file contains Python scripts used to normalize and analyze RNA-seq datasets.
 
-This release includes the following scripts:
-
 ## 1. Load Dataset (*load_dataset*)
 ```python
 # Load Dataset
@@ -31,3 +29,9 @@ Load an RNA-seq dataset from GEO in the Python environment.
 | ---- | ---- | ----------- | ----- |
 | **dataset_accession** | **str** | GEO accession of the dataset to load to the Python environment.  For a complete list of the datasets available for download, please visit [http://amp.pharm.mssm.edu/archs4/](http://amp.pharm.mssm.edu/archs4/) | [required] |
 | **platform** | **str** | GEO accession of the platform used to analyze the dataset.  If the dataset has been processed with multiple platforms, the first one will be selected by default. | [optional] |
+
+### Output
+| Name (default) | Type | Description |
+| ---- | ---- | ----------- |
+| **rawcount_dataframe** | **DataFrame** | DataFrame containing raw gene expression counts.  Columns are GEO samples, rows are gene symbols, values are raw counts as mapped by ARCHS4 ([http://amp.pharm.mssm.edu/archs4/](http://amp.pharm.mssm.edu/archs4/)). |
+| **sample_metadata_dataframe** | **DataFrame** | Metadata describing sample properties.  Columns are metadata categories, rows are GEO sample IDs, values represent metadata values as annotated on GEO. |
