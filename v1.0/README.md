@@ -18,6 +18,7 @@ The *Scripts.ipy* file contains Python scripts used to normalize and analyze RNA
 This release includes the following scripts:
 
 ### 1. Load Dataset (*load_dataset*)
+---
 ```python
 # Load Dataset
 rawcount_dataframe, sample_metadata_dataframe = load_dataset(dataset_accession, platform=None)
@@ -27,4 +28,5 @@ Load an RNA-seq dataset from GEO in the Python environment.
 #### Parameters
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **dataset_accession** | **str** | GEO accession of the dataset to load to the Python environment.  For a complete list of the datasets available for download, please visit [[http://amp.pharm.mssm.edu/archs4/]](http://amp.pharm.mssm.edu/archs4/) | [required] |
+| **dataset_accession** | **str** | GEO accession of the dataset to load to the Python environment.  For a complete list of the datasets available for download, please visit [http://amp.pharm.mssm.edu/archs4/](http://amp.pharm.mssm.edu/archs4/) | [required] |
+| **platform** | **str** | GEO accession of the platform used to analyze the dataset.  If the dataset has been processed with multiple platforms, the first one will be selected by default. | [optional] |
